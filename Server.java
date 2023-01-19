@@ -1,7 +1,7 @@
 // A simple web server using Java's built-in HttpServer
 
 // Examples from https://dzone.com/articles/simple-http-server-in-java were useful references
-package LR2;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
