@@ -37,7 +37,7 @@ Try out your typical commands like ```ls``` and ```cd```, but also try accessing
 
 ## **Step 5a: ls** ##  
 ```ls``` lists out the files in your working directory. There is a per15 file for everyone, and I also have a wavelet file that I created for lab report 2.   
-If you go to the parent directory via ```cd ../``, and take a look at the files within in via ```ls```, you will get a list of all cs15Lwi23 accounts on this server.  
+If you go to the parent directory via ```cd ../```, and take a look at the files within in via ```ls```, you will get a list of all cs15Lwi23 accounts on this server.  
 There is also a /public directory with a hello.txt file! Use ```cat /home/linux/ieng6/cs15lwi23/public/hello.txt``` to find out what's in it.  
   
   
