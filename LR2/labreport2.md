@@ -122,7 +122,7 @@ class SearchEngine {
 ---
 After starting the server, I used ```add-message?s=Hello``` to achieve the following:  
   
-![AM1](LR2/AM1.png)  
+![AM1](AM1.png)  
 
 ### Methods Called:  
 
@@ -133,10 +133,71 @@ The method ```handleRequest()``` is called. Since the path contains ```add-messa
 ### Adding another word  
 To add another word, I used ```add-message?s=World``` to achieve the following:  
   
-![AM2](LR2/AM2.png)  
+![AM2](AM2.png)  
   
   
 ### Methods Called:  
 The method ```handleRequest()``` is called again. Since ```parameter[1]``` is ```World``` this time, ```\nWorld``` is concatenated to the running string ```str```, and then displayed on the page.
   
   ---
+  
+## Part 2: Bugs
+The bug I chose is one from ```ArrayExamples.java```, and it is the one pertaining to the ```averageWithoutLowest()``` method.  
+A failure-inducing input would be an array where all the values are the same (eg. ```{1.0,1.0,1.0,1.0,1.0}```), as shown below: 
+```java
+  @Test
+  public void testAvgAllTheSame(){
+    double[] arr = {1.0,1.0,1.0,1.0,1.0};
+    double avg = ArrayExamples.averageWithoutLowest(arr);
+    assertEquals(1.0,avg,0.0);
+  }
+ ```  
+ An input that doesn't induce a failure is an array with only one value (eg. ```{1.0}```): 
+ ```java
+   @Test
+  public void testAvgOneValue(){
+    double[] arr = {1.0};
+    double avg = ArrayExamples.averageWithoutLowest(arr);
+    assertEquals(0.0,avg,0.0);
+  }  
+```
+   
+A symptom of the bug can be seen when running the test using arrays that contain the lowest value more than once:  
+![fail1](fail1.png)  
+![fail2](fail2.png)  
+  
+The problematic code is this portion:  
+```java 
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+```
+The code does not include a value in the array into the sum as long as it is equivalent to the lowest value. Thus, if the lowest value appears more than once, the calculated average would be wrong.  
+The corrected code would look something like this:  
+```java 
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      sum += num;
+    }
+    return (sum -= lowest) / (arr.length - 1);
+  }
+```  
+With the corrected code, the lowest value is deducted from the sum only once at the end of for loop, leading to the correct answer.  
+  
+## Part 3: Things I Learnt  
+I learned about how to use AssertEquals with floats - for the version of JUnit that I am using, an additional delta argument is required as a parameter. I also learned that tests often don't need many values to display symptoms of bugs. 
