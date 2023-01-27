@@ -22,10 +22,7 @@ It should look something like this.
   
   
 ## **Step 4: Logging into your account**  
-In the Bash terminal in VSCode (ctrl + \`), enter the following command, replacing ACCOUNT_NAME with what you got in step 1:  
-```
-$ ssh ACCOUNT_NAME@ieng.ucsd.edu
-```
+In the Bash terminal in VSCode (ctrl + \`), enter the following command: ```$ ssh ACCOUNT_NAME@ieng.ucsd.edu```, replacing ACCOUNT_NAME with what you found in step 1
 If prompted, type yes and hit enter.  
 You should get something like this:  
 ![login](login.png)
