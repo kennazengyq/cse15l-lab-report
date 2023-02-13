@@ -35,9 +35,9 @@ Or I can choose to just list out the folder and directories. This makes it much 
 
 ## ```find -size n```  
 Find files that match the size n, where n contains a prefix (+ meaning greater than and - meaning less than), a numerical value and a suffix (M for megabyte, k for kilobyte etc)  
-![small](small.jpg)  
+![small](small.png)  
 I can use such a command to find smaller files only.  
-![big](big.jpg)  
+![big](big.png)  
 Or I can use it to find bigger files. The use case is not so evident with the files provided as they are all text files, but let's say I have a folder with a bunch of executables or large files, and I just want to find the small readme file. Specifying a size requirement could greatly reduce my search time.  
 
 
