@@ -37,7 +37,8 @@ However, let's see what happens when I create new file in the directory.
 $ echo "new file!" > file.txt
 ```
 The same command will now return this new file because it was changed within the latest minute. 
-```$ find -cmin 1
+```
+$ find -cmin 1
 .
 ./file.txt
 ```
