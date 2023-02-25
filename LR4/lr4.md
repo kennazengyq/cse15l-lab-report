@@ -46,7 +46,13 @@ And that's all the tasks!
 The fastest way I figured out to execute all the commands was to combine all tasks into one gigantic command.   
 This means joining all commands with a ```;```, and using a command in command line to edit the java file rather than nano.  
 ```
-git clone git@github.com:kennazengyq/lab7.git ; cd lab7 ; javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java ; java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples; sed -i '43s/.*/index2 += 1;/' ListExamples.java ; javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java ; java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples ; git add *.java  ; git commit -m “ok” ; git push
+git clone git@github.com:kennazengyq/lab7.git ; 
+cd lab7 ; javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java ; 
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples ; 
+sed -i '43s/.*/index2 += 1;/' ListExamples.java ; 
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java ; 
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples ; 
+git add *.java  ; git commit -m “ok” ; git push
 
 ```
 I'm salty that I didn't win but it's okay because at least the winner used the same strategy as me. 
