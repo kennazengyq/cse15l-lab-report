@@ -20,4 +20,37 @@ Finally, we get to the fun part. One of the most popular fun commands is the Ste
 sudo apt install sl
 sl
 ```  
-Then watch as a steam locomotive moves across your screen.
+Then watch as a steam locomotive moves across your screen.  
+![sl](sl.gif)  
+
+## Fortune  
+This one is for my horoscope/astrology girlies. Install the fortune package with the following command:  
+``` sudo apt install fortune ```  
+Run the ```fortune``` command!
+```
+kenna@DESKTOP-M1F4F9E:/mnt/c/Users/Kenna$ fortune
+Look afar and see the end from the beginning.
+```
+I was a bit ???? by this fortune so I ran it a few more times:  
+```
+kenna@DESKTOP-M1F4F9E:/mnt/c/Users/Kenna$ fortune
+If you tell the truth you don't have to remember anything.
+                -- Mark Twain
+kenna@DESKTOP-M1F4F9E:/mnt/c/Users/Kenna$ fortune
+The mind is its own place, and in itself
+Can make a Heav'n of Hell, a Hell of Heav'n.
+                -- John Milton
+kenna@DESKTOP-M1F4F9E:/mnt/c/Users/Kenna$ fortune
+It is a wise father that knows his own child.
+                -- William Shakespeare, "The Merchant of Venice"
+kenna@DESKTOP-M1F4F9E:/mnt/c/Users/Kenna$ fortune
+He was part of my dream, of course -- but then I was part of his dream too.
+                -- Lewis Carroll
+```
+And all I got was quotes from white guys which I liked even less. 2/10 I don't like this package.  
+
+## lolcat  
+Looking at the same dark mode code can get boring at times. So the next time you need to use ```cat```, why not spice it up a bit.  
+Install lolcat with ```sudo apt install lolcat```.  
+Now you can use ```lolcat``` instead of ```cat```, and this would concatenate stuff in rainbow colors. 
+![lolcat](lolcat.png)
