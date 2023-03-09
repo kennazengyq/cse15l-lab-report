@@ -4,14 +4,21 @@ Sadly, it didn't take me long to realize that all the fun stuff is only really p
 
 ## Installing WSL  
 I'm not going to try to explain what's WSL because I barely understand it myself, I just know that it lets me do cool-linux-stuff on my Windows laptop. To install WSL2, I ran the following command in my VSCode shell:  
-```wsl --install```  
+```
+wsl --install
+```  
 I waited for it to install, restarted my computer and Ubuntu started installing. I just followed the set-up instructions (setting up my username and password) and I was good to go!  
+  
 ![ubuntuInstall](ubuntuInstall.png)  
+  
+  
 I was a bit insulted when it told me that "Kenna" was a "bad name" for my UNIX username, but turns out I just shouldn't capitalize the first letter.  
 I opended VSCode and opened my terminal as usual. I switched out of git bash by clicking the little "+" button and selecting WSL.  
 ![vscodeWSL](vscodeWSL.png)  
 Last step to installation, I ran the following command:  
-```sudo apt update```  
+```
+sudo apt update
+```  
 I ran this because when I tried to install one of the packages below, I was getting ```unable to locate package```. Updating the repository cache seemed to do the trick.  Note that I'm running the default repository, Ubuntu, on WSL2, so my commands will be for that.
 
 ## Steam Locomotive  
@@ -51,6 +58,35 @@ And all I got was quotes from white guys which I liked even less. 2/10 I don't l
 
 ## lolcat  
 Looking at the same dark mode code can get boring at times. So the next time you need to use ```cat```, why not spice it up a bit.  
-Install lolcat with ```sudo apt install lolcat```.  
+Install lolcat with
+```
+sudo apt install lolcat
+```  
 Now you can use ```lolcat``` instead of ```cat```, and this would concatenate stuff in rainbow colors. 
 ![lolcat](lolcat.png)
+
+
+## whatis
+Taking a break from the "useless" commands, here is a built-in command that can actually come in pretty useful. If you ever just want to know what a command does, but don't want to be blasted with the super long documentation, use the following command:  
+```
+whatis <command>
+```  
+This gives you a one-line summary of what a command does.  
+![whatis](whatis.png)  
+
+## Bonus: Fun VSCode Extensions  
+As a bonus, here's two extensions that I found (thanks titktok) that makes coding slightly more fun for me.   
+  
+  
+### Bongo cat
+Install the Bongo Cat Buddy Extension [here](https://marketplace.visualstudio.com/items?itemName=JohnHarrison.bongocat-buddy). Basically, you can pull up a bongo ca that types along with you.  
+![bongocat](bongocat.gif)  
+Whether this is a "waste" of screen space is up to you to decide.  
+
+### VS Code Pets
+For something less intrusive(?), you can install the vscode pets extension [here](https://marketplace.visualstudio.com/items?itemName=tonybaloney.vscode-pets&ssr=false#qna)  
+This allows you to add a variety of animals into your little pets corner and they will just do their thing while you code.  
+![vscodepets](vscodepets.png)  
+
+## Conclusion
+A simple google search of "fun linux commands" can keep you entertained for an entire lab session.
